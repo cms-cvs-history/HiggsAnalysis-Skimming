@@ -1,0 +1,22 @@
+# Insert input file for various skims here:
+include "HiggsAnalysis/Skimming/data/higgsToXexampleSkim.cfi"
+include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsSkim.cfi"
+
+module higgsSkimming = HiggsAnalysisSkimming {
+
+    bool DebugHiggsAnalysisSkimming = false
+
+    # Choice of the building algo: 
+    # 0 = example
+    # 1 = H -> ZZ -> 4 leptons
+    # 2 = To be created
+    int32 skim_type = 1
+
+    # std::vector<edm::ParameterSet>
+    VPSet skim_psets = {
+        {using HiggsToXexampleSkim}, 
+        {using HiggsToZZ4LeptonsSkim}
+#     , {using HiggsToXXXXXXXXXXSkim}
+    }
+}
+

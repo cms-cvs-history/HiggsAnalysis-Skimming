@@ -1,0 +1,32 @@
+block HiggsToZZ4LeptonsSkim = {
+ 
+  # Skim name
+  string skim_name                   = "HiggsToZZ4LeptonsSkim"
+
+VPSet skim_psets = {
+        {using criteriaHZZ4L}
+    }
+
+}
+
+
+block criteriaHZZ4L = {
+
+  bool DebugHiggsToZZ4LeptonsSkim    = false
+
+  # Collection to be accessed
+  InputTag RecoTrackLabel            = recoTracks
+  InputTag GlobalMuonCollectionLabel = globalMuons
+  InputTag ElectronCollectionLabel   = recoPixelMatchGsfElectrons
+
+  // HLT Pt cut on electron and muon
+  double singleMuonHLTPtCut          = 19.0 
+  double doubleMuonHLTPtCut          = 7.0 
+  double singleElecHLTEtCut          = 14.5
+  double doubleElecHLTEtCut          = 21.8
+
+  # Minimum Pt for leptons
+  double muonMinimumPt               = 5.0
+  double electronMinimumEt           = 5.0
+
+}

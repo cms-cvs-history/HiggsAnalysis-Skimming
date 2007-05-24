@@ -1,0 +1,23 @@
+block HiggsToXexampleSkim = {
+ 
+  # Skim name
+  string skim_name                   = "HiggsToXexampleSkim"
+
+VPSet skim_psets = {
+        {using criteriaHToX}
+    }
+
+}
+
+
+block criteriaHToX = {
+  bool DebugHiggsToXexampleSkim      = false
+
+  # Collection to be accessed
+  InputTag RecoTrackLabel            = recoTracks
+  InputTag GlobalMuonCollectionLabel = globalMuons
+  InputTag ElectronCollectionLabel   = recoPixelMatchGsfElectrons
+
+  double dummyCut                    = 5.0
+
+}
