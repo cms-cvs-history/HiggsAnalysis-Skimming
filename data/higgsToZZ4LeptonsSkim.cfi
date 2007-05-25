@@ -17,7 +17,7 @@ block criteriaHZZ4L = {
   # Collection to be accessed
   InputTag RecoTrackLabel            = recoTracks
   InputTag GlobalMuonCollectionLabel = globalMuons
-  InputTag ElectronCollectionLabel   = recoPixelMatchGsfElectrons
+  InputTag ElectronCollectionLabel   = pixelMatchGsfElectrons
 
   // HLT Pt cut on electron and muon
   double singleMuonHLTPtCut          = 19.0 
