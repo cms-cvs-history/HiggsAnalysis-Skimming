@@ -1,7 +1,7 @@
 block HeavyChHiggsToTauNuSkim = {
  
     # Skim name
-    string skim_name                  = "HeavyChHiggsToTauNuSkim"
+    string skim_name = "HeavyChHiggsToTauNuSkim"
 
     VPSet skim_psets = {
         {using criteriaHToHeavyChHiggsToTauNu}
@@ -11,12 +11,12 @@ block HeavyChHiggsToTauNuSkim = {
 
 
 block criteriaHToHeavyChHiggsToTauNu = {
-  bool DebugHeavyChHiggsToTauNuSkim   = false
+  bool DebugHeavyChHiggsToTauNuSkim     = false
 
   # Collection to be accessed
-        InputTag jetLabel             = JetTagCollection
-        untracked int minNumberOfJets = 3
-        untracked double jetEtMin     = 20.0
-        untracked double jetEtaMin    = -2.4
-        untracked double jetEtaMax    = 2.4
+        InputTag jetLabel               = JetTagCollection
+        untracked int32 minNumberOfJets = 3
+        untracked double jetEtMin       = 20.0
+        untracked double jetEtaMin      = -2.4
+        untracked double jetEtaMax      = 2.4
 }
