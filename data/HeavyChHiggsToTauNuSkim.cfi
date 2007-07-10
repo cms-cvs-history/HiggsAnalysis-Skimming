@@ -14,7 +14,7 @@ block criteriaHToHeavyChHiggsToTauNu = {
   bool DebugHeavyChHiggsToTauNuSkim     = false
 
   # Collection to be accessed
-        InputTag jetLabel               = JetTagCollection
+        InputTag  JetTagCollection      = trackCountingHighPurJetTags
         untracked int32 minNumberOfJets = 3
         untracked double jetEtMin       = 20.0
         untracked double jetEtaMin      = -2.4
