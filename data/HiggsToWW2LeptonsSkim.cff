@@ -1,16 +1,12 @@
 # HLT setup
 include "HLTrigger/Configuration/data/common/HLTSetup.cff" 
-# Muons High L
-include "HLTrigger/Muon/data/PathSingleMu_2x1033_Iso.cff"
-include "HLTrigger/Muon/data/PathDiMuon_2x1033_Iso.cff"
-# Electrons Global 
-// include "HLTrigger/Egamma/data/EgammaHLT.cff"
-// include "HLTrigger/Egamma/data/SingleElectron.cff"
-// include "HLTrigger/Egamma/data/DoubleElectron.cff"
+# Muons Low L
+include "HLTrigger/Muon/data/PathSingleMu_1032_Iso.cff"
+include "HLTrigger/Muon/data/PathDiMuon_1032_Iso.cff"
 # Electrons Local
-include "HLTrigger/Egamma/data/EgammaHLTLocal_2e33.cff"
-include "HLTrigger/Egamma/data/SingleElectronL1Isolated_2e33.cff"
-include "HLTrigger/Egamma/data/DoubleElectronL1Isolated_2e33.cff"
+include "HLTrigger/Egamma/data/EgammaHLTLocal_1e32.cff"
+include "HLTrigger/Egamma/data/SingleElectronL1Isolated_1e32.cff"
+include "HLTrigger/Egamma/data/DoubleElectronL1Isolated_1e32.cff"
 
 # HWW Skim
 //  include "PhysicsTools/RecoCandAlgos/data/allMuons.cfi" 
