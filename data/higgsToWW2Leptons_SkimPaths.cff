@@ -29,7 +29,7 @@ module higgsToWWHLTFilter = HLTHighLevel {
   bool byName = true
   bool andOr= true
 #  vstring HLTPaths ={"pSMIso","pDMIso"}
-  vstring HLTPaths ={"HLT1MuonIso","HLT1Electron","HLT2MuonIso","HLT2Electron"}
+  vstring HLTPaths ={"HLT1MuonIso","HLT1Electron","HLT2MuonNonIso","HLT2Electron","HLT2ElectronRelaxed","HLTXElectronMuon","HLTXElectronMuonRelaxed"}
 }
 
 path cand = {allMuons & allElectrons & allLeptons}
