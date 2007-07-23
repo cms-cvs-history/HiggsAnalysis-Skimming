@@ -1,0 +1,13 @@
+include "Configuration/EventContent/data/EventContent.cff"
+
+    module AODSIMhiggsToWW2LeptonsEventContent = PoolOutputModule
+    {
+        untracked string fileName = "/tmp/etorassa/tot_Filtered.root"
+        untracked string filterName = "tot_HWWFilter"
+        untracked string dataTier = "AODSIM"
+        using AODSIMEventContent
+	untracked PSet SelectEvents = 
+	{
+	    vstring SelectEvents = {"HWWFilterPath"}
+	}
+    }
