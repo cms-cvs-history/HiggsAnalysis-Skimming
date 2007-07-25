@@ -1,0 +1,23 @@
+include "Configuration/EventContent/data/EventContent.cff"
+
+module higgsToZZ4LeptonsEventContentAODSIM = PoolOutputModule {
+  untracked string fileName = "hzz4l_AODSIM.root"
+  untracked string filterName = "higgsToZZ4Leptons_AODSIM"
+  untracked string dataTier = "AODSIM"
+  using AODSIMEventContent
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {"HZZFilterPath"}
+  }
+}
+
+
+module higgsToZZ4LeptonsEventContentRECOSIM = PoolOutputModule {
+  untracked string fileName = "hzz4l_AODSIM.root"
+  untracked string filterName = "higgsToZZ4Leptons_RECOSIM"
+  untracked string dataTier = "RECOSIM"
+  using RECOSIMEventContent
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {"HZZFilterPath"}
+  }
+}
+

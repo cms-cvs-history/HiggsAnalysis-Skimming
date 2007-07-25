@@ -1,3 +1,8 @@
+# Entries for HZZ skim
+#
+# Dominique Fortin - UC Riverside
+#
+
 block HiggsToZZ4LeptonsSkim = {
 
   # Skim name
@@ -6,7 +11,6 @@ block HiggsToZZ4LeptonsSkim = {
   VPSet skim_psets = {
         { using criteriaHZZ4L }
   }
-
 }
 
 
@@ -19,14 +23,10 @@ block criteriaHZZ4L = {
   InputTag GlobalMuonCollectionLabel = globalMuons
   InputTag ElectronCollectionLabel   = pixelMatchGsfElectrons
 
-  // Emulator for HLT Pt cut on electron and muon
-  double singleMuonHLTPtCut          = 19.0 
-  double doubleMuonHLTPtCut          = 7.0 
-  double singleElecHLTEtCut          = 21.8
-  double doubleElecHLTEtCut          = 14.5
-
-  # Minimum Pt for leptons
+  # Pt threshold for leptons
   double muonMinimumPt               = 1.0
   double electronMinimumEt           = 1.0
-  int32  nLeptonMinimum              = 4
+
+  # Minimum number of identified leptons above pt threshold
+  int32  nLeptonMinimum              = 3
 }

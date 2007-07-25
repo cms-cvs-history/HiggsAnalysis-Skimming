@@ -1,0 +1,7 @@
+module higgsToZZ4LeptonsHLTFilter = HLTHighLevel { 
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName                = true
+  bool andOr                 = true
+  vstring HLTPaths = {"HLT1MuonIso","HLT1MuonNonIso","HLT2MuonNonIso","HLT1Electron","HLT2Electron"}
+}
+
