@@ -9,10 +9,9 @@ include "HLTrigger/Egamma/data/SingleElectronL1Isolated_1e32.cff"
 include "HLTrigger/Egamma/data/DoubleElectronL1Isolated_1e32.cff"
 
 # HZZ Skim
-include "HiggsAnalysis/Skimming/data/higgsSkimming.cff"
-replace higgsSkimming.skim_type = 1
+include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsSkim.cfi"
 
-path HZZFilterPath1m = {singleMuNoIso  & higgsSkimming}
-path HZZFilterPath1e = {singleElectronL1Isolated & higgsSkimming}
-path HZZFilterPath2m = {diMuonNoIso  & higgsSkimming}
-path HZZFilterPath2e = {doubleElectronL1Isolated & higgsSkimming}
+path HZZFilterPath1m = {singleMuNoIso  & higgsToZZ4LeptonsSkim}
+path HZZFilterPath1e = {singleElectronL1Isolated & higgsToZZ4LeptonsSkim}
+path HZZFilterPath2m = {diMuonNoIso  & higgsToZZ4LeptonsSkim}
+path HZZFilterPath2e = {doubleElectronL1Isolated & higgsToZZ4LeptonsSkim}
