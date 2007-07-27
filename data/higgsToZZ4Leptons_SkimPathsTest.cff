@@ -1,7 +1,7 @@
 # HLT setup
 include "HLTrigger/Configuration/data/common/HLTSetup.cff" 
 # Muons Low L
-include "HLTrigger/Muon/data/PathSingleMu_1032_Iso.cff"
+include "HLTrigger/Muon/data/PathSingleMu_1032_NoIso.cff"
 include "HLTrigger/Muon/data/PathDiMuon_1032_NoIso.cff"
 # Electrons Local
 include "HLTrigger/Egamma/data/EgammaHLTLocal_1e32.cff"
@@ -10,9 +10,9 @@ include "HLTrigger/Egamma/data/DoubleElectronL1Isolated_1e32.cff"
 
 # HZZ Skim
 include "HiggsAnalysis/Skimming/data/higgsSkimming.cff"
-replace HiggsAnalysisSkimming.skim_type = 1
+replace higgsSkimming.skim_type = 1
 
-path HZZFilterPath1m = {singleMuIso    & higgsSkimming}
-path HZZFilterPath1e = {singleElectron & higgsSkimming}
-path HZZFilterPath2m = {diMuonNonIso   & higgsSkimming}
-path HZZFilterPath2e = {doubleElectron & higgsSkimming}
+path HZZFilterPath1m = {singleMuNoIso  & higgsSkimming}
+path HZZFilterPath1e = {singleElectronL1Isolated & higgsSkimming}
+path HZZFilterPath2m = {diMuonNoIso  & higgsSkimming}
+path HZZFilterPath2e = {doubleElectronL1Isolated & higgsSkimming}

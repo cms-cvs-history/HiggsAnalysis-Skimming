@@ -1,0 +1,12 @@
+include "Configuration/EventContent/data/EventContent.cff"
+include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_EventContent.cff"
+
+block higgsToZZ4LeptonsEventContentAODSIM = {
+  untracked vstring outputCommands = { 
+  }
+}
+
+replace higgsToZZ4LeptonsEventContentAODSIM.outputCommands += AODSIMEventContent.outputCommands
+replace higgsToZZ4LeptonsEventContentAODSIM.outputCommands += higgsToZZ4LeptonsEventContent.outputCommands
+
+

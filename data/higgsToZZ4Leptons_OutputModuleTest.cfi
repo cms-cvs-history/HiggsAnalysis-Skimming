@@ -1,23 +1,25 @@
 include "Configuration/EventContent/data/EventContent.cff"
+include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_AODSIM.cff"
+include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_RECOSIM.cff"
 
-module higgsToZZ4LeptonsEventContentAODSIM = PoolOutputModule {
-  untracked string fileName = "hzz4l_AODSIM.root"
-  untracked string filterName = "higgsToZZ4Leptons_AODSIM"
-  untracked string dataTier = "AODSIM"
-  using AODSIMEventContent
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {"HZZFilterPath1m","HZZFilterPath1e","HZZFilterPath2m","HZZFilterPath2e"}
+module higgsToZZ4LeptonsOutputModuleAODSIM = PoolOutputModule {
+  untracked string fileName = "/tmp/hzz4l_AODSIM.root"
+  using higgsToZZ4LeptonsEventContentAODSIM
+  using higgsToZZ4LeptonsEventSelectionTest
+  untracked PSet datasets ={
+    untracked string dataTier = "USER"
+    untracked string filterName = "higgsToZZ4LeptonsAODSIM"
   }
 }
 
 
-module higgsToZZ4LeptonsEventContentRECOSIM = PoolOutputModule {
-  untracked string fileName = "hzz4l_RECOSIM.root"
-  untracked string filterName = "higgsToZZ4Leptons_RECOSIM"
-  untracked string dataTier = "RECOSIM"
-  using RECOSIMEventContent
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {"HZZFilterPath1m","HZZFilterPath1e","HZZFilterPath2m","HZZFilterPath2e"}
+module higgsToZZ4LeptonsOutputModuleRECOSIM = PoolOutputModule {
+  untracked string fileName = "/tmp/hzz4l_RECOSIM.root"
+  using higgsToZZ4LeptonsEventContentRECOSIM
+  using higgsToZZ4LeptonsEventSelectionTest
+  untracked PSet datasets ={
+    untracked string dataTier = "USER"
+    untracked string filterName = "higgsToZZ4LeptonsRECOSIM"
   }
 }
 

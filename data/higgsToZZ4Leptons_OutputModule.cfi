@@ -1,8 +1,9 @@
 include "Configuration/EventContent/data/EventContent.cff"
+include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_EventContent.cff"
 
-module higgsToZZ4LeptonsEventContentAODSIM = PoolOutputModule {
+module higgsToZZ4LeptonsOutputModuleAODSIM = PoolOutputModule {
   untracked string fileName = "hzz4l_AODSIM.root"
-  untracked string filterName = "higgsToZZ4Leptons_AODSIM"
+  untracked string filterName = "higgsToZZ4LeptonsAODSIM"
   untracked string dataTier = "AODSIM"
   using AODSIMEventContent
   untracked PSet SelectEvents = {
@@ -11,7 +12,7 @@ module higgsToZZ4LeptonsEventContentAODSIM = PoolOutputModule {
 }
 
 
-module higgsToZZ4LeptonsEventContentRECOSIM = PoolOutputModule {
+module higgsToZZ4LeptonsOutputModuleRECOSIM = PoolOutputModule {
   untracked string fileName = "hzz4l_AODSIM.root"
   untracked string filterName = "higgsToZZ4Leptons_RECOSIM"
   untracked string dataTier = "RECOSIM"
