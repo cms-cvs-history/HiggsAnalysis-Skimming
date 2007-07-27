@@ -5,7 +5,6 @@ module higgsToZZ4HLTrigReport = HLTrigReport {
 }
 
 # HZZ Skim
-include "HiggsAnalysis/Skimming/data/higgsSkimming.cff"
-replace HiggsAnalysisSkimming.skim_type = 1
+include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsSkim.cfi"
 
 path HZZFilterPath = { higgsToZZ4HLTrigReport & higgsToZZHLTFilter & higgsSkimming }

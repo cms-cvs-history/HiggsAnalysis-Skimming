@@ -1,17 +1,65 @@
 # HLT setup
 include "HLTrigger/Configuration/data/common/HLTSetup.cff" 
-# Muons Low L
-include "HLTrigger/Muon/data/PathSingleMu_1032_NoIso.cff"
-include "HLTrigger/Muon/data/PathDiMuon_1032_NoIso.cff"
-# Electrons Local
-include "HLTrigger/Egamma/data/EgammaHLTLocal_1e32.cff"
-include "HLTrigger/Egamma/data/SingleElectronL1Isolated_1e32.cff"
-include "HLTrigger/Egamma/data/DoubleElectronL1Isolated_1e32.cff"
 
-# HZZ Skim
+# Muons
+include "HLTrigger/Muon/data/PathSingleMu_1032_NoIso.cff"
+path HLT1MuonNonIso      = { singleMuNoIso }
+
+include "HLTrigger/Muon/data/PathSingleMu_1032_Iso.cff"
+path HLT1MuonIso         = { singleMuIso }
+
+include "HLTrigger/Muon/data/PathDiMuon_1032_NoIso.cff"
+path HLT2MuonNonIso      = { diMuonNoIso }
+
+
+# Electrons Local
+include "HLTrigger/Egamma/data/EgammaHLTLocal.cff"
+
+include "HLTrigger/Egamma/data/SingleElectronL1Isolated.cff"
+path HLT1Electron        =    {singleElectronL1Isolated}
+
+include "HLTrigger/Egamma/data/SingleElectronL1NonIsolated.cff"
+path HLT1ElectronRelaxed =    {singleElectronL1NonIsolated}
+
+include "HLTrigger/Egamma/data/DoubleElectronL1Isolated.cff"
+path HLT2Electron        =    {doubleElectronL1Isolated}
+
+include "HLTrigger/Egamma/data/DoubleElectronL1NonIsolated.cff"
+path HLT2ElectronRelaxed =    {doubleElectronL1NonIsolated}
+
+module hltRep1m = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT1MuonNonIso"}
+}
+
+module hltRep2m = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT2MuonNonIso"}
+}
+
+module hltRep1e = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT1ElectronRelaxed"}
+}
+
+module hltRep2e = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT2ElectronRelaxed"}
+}
+
+
+# HZZ Filter
 include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsSkim.cfi"
 
-path HZZFilterPath1m = {singleMuNoIso  & higgsToZZ4LeptonsSkim}
-path HZZFilterPath1e = {singleElectronL1Isolated & higgsToZZ4LeptonsSkim}
-path HZZFilterPath2m = {diMuonNoIso  & higgsToZZ4LeptonsSkim}
-path HZZFilterPath2e = {doubleElectronL1Isolated & higgsToZZ4LeptonsSkim}
+path HZZFilterPath1m = {hltRep1m  &  HLT1MuonNonIso       &  higgsToZZ4LeptonsSkim}
+path HZZFilterPath1e = {hltRep1e  &  HLT1ElectronRelaxed  &  higgsToZZ4LeptonsSkim}
+path HZZFilterPath2m = {hltRep2m  &  HLT2MuonNonIso       &  higgsToZZ4LeptonsSkim}
+path HZZFilterPath2e = {hltRep2e  &  HLT2ElectronRelaxed  &  higgsToZZ4LeptonsSkim}

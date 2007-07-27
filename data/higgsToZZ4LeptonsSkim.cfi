@@ -14,8 +14,8 @@ module higgsToZZ4LeptonsSkim = HiggsToZZ4LeptonsSkim {
   InputTag ElectronCollectionLabel   = pixelMatchGsfElectrons
 
   # Pt threshold for leptons
-  double muonMinimumPt               = 1.0
-  double electronMinimumEt           = 1.0
+  double muonMinimumPt               = 3.0
+  double electronMinimumEt           = 3.0
 
   # Minimum number of identified leptons above pt threshold
   int32  nLeptonMinimum              = 3

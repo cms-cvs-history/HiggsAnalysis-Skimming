@@ -13,7 +13,7 @@ module higgsToZZ4LeptonsOutputModuleAODSIM = PoolOutputModule {
 
 
 module higgsToZZ4LeptonsOutputModuleRECOSIM = PoolOutputModule {
-  untracked string fileName = "hzz4l_AODSIM.root"
+  untracked string fileName = "hzz4l_RECOSIM.root"
   untracked string filterName = "higgsToZZ4Leptons_RECOSIM"
   untracked string dataTier = "RECOSIM"
   using RECOSIMEventContent
