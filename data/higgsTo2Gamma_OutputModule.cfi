@@ -1,0 +1,24 @@
+include "Configuration/EventContent/data/EventContent.cff"
+include "HiggsAnalysis/Skimming/data/higgsTo2Gamma_EventContent.cff"
+
+module higgsTo2GammaOutputModuleAODSIM = PoolOutputModule {
+  untracked string fileName = "hgg_AODSIM.root"
+  untracked string filterName = "higgsTo2GammaAODSIM"
+  untracked string dataTier = "AODSIM"
+  using AODSIMEventContent
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {"HggFilterPath"}
+  }
+}
+
+
+module higgsTo2GammaOutputModuleRECOSIM = PoolOutputModule {
+  untracked string fileName = "hgg_RECOSIM.root"
+  untracked string filterName = "higgsTo2Gamma_RECOSIM"
+  untracked string dataTier = "RECOSIM"
+  using RECOSIMEventContent
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {"HggFilterPath"}
+  }
+}
+

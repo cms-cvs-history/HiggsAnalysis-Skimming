@@ -1,0 +1,41 @@
+# HLT setup
+include "HLTrigger/Configuration/data/common/HLTSetup.cff" 
+
+# Photons
+# Egamma local
+include "HLTrigger/Egamma/data/EgammaHLTLocal.cff"
+
+include "HLTrigger/Egamma/data/SinglePhotonL1Isolated.cff"
+path HLT1Photon          =    {singlePhotonL1Isolated}
+
+include "HLTrigger/Egamma/data/SinglePhotonL1NonIsolated.cff"
+path HLT1PhotonRelaxed   =    {singlePhotonL1NonIsolated}
+
+include "HLTrigger/Egamma/data/DoublePhotonL1Isolated.cff"
+path HLT2Photon          =    {doublePhotonL1Isolated}
+
+include "HLTrigger/Egamma/data/DoublePhotonL1NonIsolated.cff"
+path HLT2PhotonRelaxed   =    {doublePhotonL1NonIsolated}
+
+
+module hltRep1g = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT1PhotonRelaxed"}
+}
+
+module hltRep2g = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT2PhotonRelaxed"}
+}
+
+
+# Hgg Filter
+include "HiggsAnalysis/Skimming/data/higgsTo2GammaSkim.cfi"
+
+path HggFilterPath1g = {hltRep1g  &  HLT1PhotonRelaxed  &  higgsTo2GammaSkim}
+path HggFilterPath2g = {hltRep2g  &  HLT2PhotonRelaxed  &  higgsTo2GammaSkim}
+

@@ -1,0 +1,20 @@
+# Entries for H2g skim
+#
+# Kati Lassila-Perini - Helsinki Institute of Physics
+#
+
+
+module higgsTo2GammaSkim = HiggsTo2GammaSkim {
+
+  bool DebugHiggsTo2GammaSkim        = false
+
+  # Collection to be accessed
+  InputTag PhotonCollectionLabel     = photons
+
+  # Pt threshold for leptons
+  double photon1MinimumPt            = 25.0
+  double photon2MinimumPt            = 25.0
+
+  # Minimum number of identified leptons above pt threshold
+  int32  nPhotonMinimum              = 2
+}

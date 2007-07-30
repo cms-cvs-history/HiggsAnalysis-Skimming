@@ -1,0 +1,10 @@
+include "HiggsAnalysis/Skimming/data/higgsTo2Gamma_HLTPaths.cfi"
+
+module higgsTo2GammaHLTrigReport = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+}
+
+# Hgg Skim
+include "HiggsAnalysis/Skimming/data/higgsTo2GammaSkim.cfi"
+
+path HggFilterPath = { higgsTo2GammaHLTrigReport & higgsTo2GammaHLTFilter & higgsTo2GammaSkim }
