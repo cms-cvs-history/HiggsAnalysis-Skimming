@@ -34,10 +34,48 @@ module hltReport=HLTrigReport{
 }
 
 
+module highAll = HLTHighLevel{
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT1MuonNonIso","HLT1MuonIso","HLT2MuonNonIso","HLT1ElectronRelaxed","HLT2ElectronRelaxed","HLT1Electron","HLT2Electron"}
+}
+
+module high1m = HLTHighLevel{
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT1MuonNonIso","HLT1MuonIso"}
+}
+
+module high2m = HLTHighLevel{
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT2MuonNonIso"}
+}
+
+
+module high1e = HLTHighLevel{
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT1ElectronRelaxed","HLT1Electron"}
+}
+
+
+module high2e = HLTHighLevel{
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName = true
+  bool andOr= true
+  vstring HLTPaths = {"HLT2ElectronRelaxed","HLT2Electron"}
+}
+
+
 # HZZ Filter
 include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsSkim.cfi"
 
-path HZZFilterPath1m = {HLT1MuonNonIso       &  higgsToZZ4LeptonsSkim}
-path HZZFilterPath1e = {HLT1ElectronRelaxed  &  higgsToZZ4LeptonsSkim}
-path HZZFilterPath2m = {HLT2MuonNonIso       &  higgsToZZ4LeptonsSkim}
-path HZZFilterPath2e = {HLT2ElectronRelaxed  &  higgsToZZ4LeptonsSkim}
+path HZZFilterPath1m = { high1m  &  higgsToZZ4LeptonsSkim}
+path HZZFilterPath1e = { high1e  &  higgsToZZ4LeptonsSkim}
+path HZZFilterPath2m = { high2m  &  higgsToZZ4LeptonsSkim}
+path HZZFilterPath2e = { high2e  &  higgsToZZ4LeptonsSkim}
