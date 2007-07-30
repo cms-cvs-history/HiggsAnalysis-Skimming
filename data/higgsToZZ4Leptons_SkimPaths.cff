@@ -7,4 +7,4 @@ module higgsToZZ4HLTrigReport = HLTrigReport {
 # HZZ Skim
 include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsSkim.cfi"
 
-path HZZFilterPath = { higgsToZZ4HLTrigReport & higgsToZZHLTFilter & higgsSkimming }
+path HZZFilterPath = { higgsToZZ4HLTrigReport & higgsToZZ4LeptonsHLTFilter & higgsToZZ4LeptonsSkim }
