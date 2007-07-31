@@ -18,8 +18,7 @@ block higgsTo2GammaEventSelection = {
 block higgsTo2GammaEventSelectionTest = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "HggFilterPath1g",
-      "HggFilterPath2g"
+      "HggFilterPath"
     }
   }
 }
