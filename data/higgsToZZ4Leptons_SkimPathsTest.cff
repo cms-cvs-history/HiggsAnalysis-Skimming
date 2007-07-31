@@ -75,7 +75,8 @@ module high2e = HLTHighLevel{
 # HZZ Filter
 include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsSkim.cfi"
 
-path HZZFilterPath1m = { high1m  &  higgsToZZ4LeptonsSkim}
-path HZZFilterPath1e = { high1e  &  higgsToZZ4LeptonsSkim}
-path HZZFilterPath2m = { high2m  &  higgsToZZ4LeptonsSkim}
-path HZZFilterPath2e = { high2e  &  higgsToZZ4LeptonsSkim}
+//path HZZFilterPath1m = { high1m  &  higgsToZZ4LeptonsSkim}
+//path HZZFilterPath1e = { high1e  &  higgsToZZ4LeptonsSkim}
+//path HZZFilterPath2m = { high2m  &  higgsToZZ4LeptonsSkim}
+//path HZZFilterPath2e = { high2e  &  higgsToZZ4LeptonsSkim}
+path HZZFilterPath   = { highAll &  higgsToZZ4LeptonsSkim}

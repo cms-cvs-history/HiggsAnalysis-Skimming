@@ -18,10 +18,11 @@ block higgsToZZ4LeptonsEventSelection = {
 block higgsToZZ4LeptonsEventSelectionTest = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "HZZFilterPath1m",
-      "HZZFilterPath1e",
-      "HZZFilterPath2m",
-      "HZZFilterPath2e"
+      "HZZFilterPath"
+//      "HZZFilterPath1m",
+//      "HZZFilterPath1e",
+//      "HZZFilterPath2m",
+//      "HZZFilterPath2e"
     }
   }
 }
