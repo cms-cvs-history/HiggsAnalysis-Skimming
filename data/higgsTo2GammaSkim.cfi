@@ -11,10 +11,10 @@ module higgsTo2GammaSkim = HiggsTo2GammaSkim {
   # Collection to be accessed
   InputTag PhotonCollectionLabel     = photons
 
-  # Pt threshold for leptons
+  # Pt threshold for photons
   double photon1MinimumPt            = 25.0
   double photon2MinimumPt            = 25.0
 
-  # Minimum number of identified leptons above pt threshold
-  int32  nPhotonMinimum              = 2
+  # Minimum number of identified photons above pt threshold
+  int32  nPhotonMinimum              = 1
 }

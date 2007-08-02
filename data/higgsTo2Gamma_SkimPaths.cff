@@ -1,4 +1,16 @@
-include "HiggsAnalysis/Skimming/data/higgsTo2Gamma_HLTPaths.cfi"
+# HLT setup
+include "HLTrigger/Configuration/data/common/HLTSetup.cff" 
+
+# Photons
+# Egamma local
+include "HLTrigger/Egamma/data/EgammaHLTLocal.cff"
+include "HLTrigger/Egamma/data/SinglePhotonL1Isolated.cff"
+include "HLTrigger/Egamma/data/SinglePhotonL1NonIsolated.cff"
+include "HLTrigger/Egamma/data/DoublePhotonL1Isolated.cff"
+include "HLTrigger/Egamma/data/DoublePhotonL1NonIsolated.cff"
+
+sequence higgsTo2GammaHLTFilter = { singlePhotonL1Isolated & singlePhotonL1NonIsolated &
+doublePhotonL1Isolated & doublePhotonL1NonIsolated }
 
 module higgsTo2GammaHLTrigReport = HLTrigReport {
   InputTag HLTriggerResults  = TriggerResults
