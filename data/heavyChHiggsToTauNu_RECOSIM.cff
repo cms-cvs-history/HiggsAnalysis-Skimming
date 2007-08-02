@@ -1,0 +1,12 @@
+include "Configuration/EventContent/data/EventContent.cff"
+include "HiggsAnalysis/Skimming/data/heavyChHiggsToTauNu_EventContent.cff"
+
+block heavyChHiggsToTauNuEventContentRECOSIM = {
+  untracked vstring outputCommands = { 
+  }
+}
+
+replace heavyChHiggsToTauNuEventContentRECOSIM.outputCommands += RECOSIMEventContent.outputCommands
+replace heavyChHiggsToTauNuEventContentRECOSIM.outputCommands += heavyChHiggsToTauNuEventContent.outputCommands
+
+

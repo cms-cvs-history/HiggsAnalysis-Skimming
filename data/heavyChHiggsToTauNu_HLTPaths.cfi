@@ -1,0 +1,6 @@
+module heavyChHiggsToTauNuHLTFilter = HLTHighLevel { 
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName                = true
+  bool andOr                 = true
+  vstring HLTPaths = {"HLT1Tau1MET"}
+}
