@@ -1,0 +1,4 @@
+include "HiggsAnalysis/Skimming/data/higgsToTauTau_ETauSequences.cff"
+
+path higgsToTauTauETauHLTPath = { higgsToTauTauETauHLTSequence }
+

@@ -1,0 +1,23 @@
+include "HiggsAnalysis/Skimming/data/higgsToTauTau_ETau_EventContent.cff"
+include "HiggsAnalysis/Skimming/data/higgsToTauTau_ETau_EventContent_AODSIM.cff"
+include "HiggsAnalysis/Skimming/data/higgsToTauTau_ETau_EventContent_RECOSIM.cff"
+
+module higgsToTauTauETauOutputModuleAODSIM = PoolOutputModule {
+  untracked string fileName = "higgsToTauTauETauAODSIM.root"
+  using higgsToTauTauETauEventContentAODSIM
+  using higgsToTauTauETauEventSelection  
+  untracked PSet datasets = {
+    untracked string dataTier   = "USER"
+    untracked string filterName = "higgsToTauTauETauAODSIM"
+  }
+}
+
+module higgsToTauTauETauOutputModuleRECOSIM = PoolOutputModule {
+  untracked string fileName = "higgsToTauTauETauRECOSIM.root"
+  using higgsToTauTauETauEventContentRECOSIM
+  using higgsToTauTauETauEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "higgsToTauTauETauRECOSIM"
+  }
+}
