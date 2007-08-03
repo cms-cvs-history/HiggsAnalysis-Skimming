@@ -3,22 +3,22 @@ include "HiggsAnalysis/Skimming/data/heavyChHiggsToTauNu_EventContent.cff"
 
 module heavyChHiggsToTauNuOutputModuleAODSIM = PoolOutputModule {
   untracked string fileName = "heavyChHiggsToTauNu_AODSIM.root"
-  untracked string filterName = "heavyChHiggsToTauNuAODSIM"
-  untracked string dataTier = "AODSIM"
   using AODSIMEventContent
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {"heavyChHiggsToTauNuFilterPath"}
+  using heavyChHiggsToTauNuEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "AODSIM"
+    untracked string filterName = "heavyChHiggsToTauNuAODSIM"
   }
 }
 
 
 module heavyChHiggsToTauNuOutputModuleRECOSIM = PoolOutputModule {
   untracked string fileName = "heavyChHiggsToTauNu_RECOSIM.root"
-  untracked string filterName = "heavyChHiggsToTauNuRECOSIM"
-  untracked string dataTier = "RECOSIM"
   using RECOSIMEventContent
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {"heavyChHiggsToTauNuFilterPath"}
+  using heavyChHiggsToTauNuEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "RECOSIM"
+    untracked string filterName = "heavyChHiggsToTauNuRECOSIM"
   }
 }
 

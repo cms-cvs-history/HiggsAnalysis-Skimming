@@ -3,22 +3,23 @@ include "HiggsAnalysis/Skimming/data/higgsToInvisible_EventContent.cff"
 
 module higgsToInvisibleOutputModuleAODSIM = PoolOutputModule {
   untracked string fileName = "hToInvis_AODSIM.root"
-  untracked string filterName = "higgsToInvisibleAODSIM"
-  untracked string dataTier = "AODSIM"
   using AODSIMEventContent
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {"HToInvisFilterPath"}
+  using higgsToInvisibleEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier   = "AODSIM"
+    untracked string filterName = "higgsToInvisibleAODSIM"
   }
 }
 
 
 module higgsToZZ4LeptonsOutputModuleRECOSIM = PoolOutputModule {
   untracked string fileName = "hToInvis_RECOSIM.root"
-  untracked string filterName = "higgsToInvisibleRECOSIM"
-  untracked string dataTier = "RECOSIM"
   using RECOSIMEventContent
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {"HToInvisFilterPath"}
+  using higgsToInvisibleEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier   = "RECOSIM"
+    untracked string filterName = "higgsToInvisibleRECOSIM"
   }
+
 }
 

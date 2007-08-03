@@ -3,21 +3,21 @@ include "HiggsAnalysis/Skimming/data/higgsToWW2Leptons_EventContent.cff"
 
 module higgsToWW2LeptonsOutputModuleAODSIM = PoolOutputModule {
   untracked string fileName = "hww2l_AODSIM.root"
-  untracked string filterName = "higgsToWW2LeptonsAODSIM"
-  untracked string dataTier = "AODSIM"
   using AODSIMEventContent
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {"HWWFilterPath"}
+  using higgsToWW2LeptonsEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "AODSIM"
+    untracked string filterName = "higgsToWW2LeptonsAODSIM"
   }
 }
 
 
 module higgsToWW2LeptonsOutputModuleRECOSIM = PoolOutputModule {
   untracked string fileName = "hww2l_RECOSIM.root"
-  untracked string filterName = "higgsToWW2LeptonsRECOSIM"
-  untracked string dataTier = "RECOSIM"
   using RECOSIMEventContent
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {"HWWFilterPath"}
+  using higgsToWW2LeptonsEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "RECOSIM"
+    untracked string filterName = "higgsToWW2LeptonsRECOSIM"
   }
 }
