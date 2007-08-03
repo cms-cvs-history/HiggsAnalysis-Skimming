@@ -1,0 +1,24 @@
+# Can insert block to customize what goes inside root file on top of AOD/RECO
+block  higgsToWW2LeptonsEventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+
+block higgsToWW2LeptonsEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "HWWFilterPath"
+    }
+  }
+}
+
+
+block higgsToWW2LeptonsEventSelectionTest = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "HWWFilterPath"
+    }
+  }
+}
+

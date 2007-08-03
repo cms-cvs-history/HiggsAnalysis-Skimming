@@ -1,0 +1,11 @@
+module higgsWWFilter = HiggsToWW2LeptonsSkim {
+  InputTag RecoTrackLabel            = recoTracks
+  InputTag GlobalMuonCollectionLabel = globalMuons
+  InputTag ElectronCollectionLabel   = pixelMatchGsfElectrons
+
+  untracked double SingleTrackPtMin = 20.0
+  untracked double DiTrackPtMin = 10.0
+  untracked double etaMin = -2.4
+  untracked double etaMax = 2.4
+}
+

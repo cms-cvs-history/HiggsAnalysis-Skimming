@@ -1,0 +1,12 @@
+include "Configuration/EventContent/data/EventContent.cff"
+include "HiggsAnalysis/Skimming/data/higgsToWW2Leptons_EventContent.cff"
+
+block higgsToWW2LeptonsEventContentRECOSIM = {
+  untracked vstring outputCommands = { 
+  }
+}
+
+replace higgsToWW2LeptonsEventContentRECOSIM.outputCommands += RECOSIMEventContent.outputCommands
+replace higgsToWW2LeptonsEventContentRECOSIM.outputCommands += higgsToWW2LeptonsEventContent.outputCommands
+
+

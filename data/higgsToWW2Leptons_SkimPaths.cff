@@ -1,36 +1,10 @@
-# HWW Skim
+include "HiggsAnalysis/Skimming/data/higgsToWW2Leptons_HLTPaths.cfi"
 
 module higgsToWWTrigReport = HLTrigReport {
   InputTag HLTriggerResults = TriggerResults
 }
 
-module allMuons = MuonCloneProducer {
-     InputTag src = globalMuons
-}
+# HWW Skim
+include "HiggsAnalysis/Skimming/data/higgsToWW2LeptonsSkim.cfi"
 
-module allElectrons = PixelMatchGsfElectronCloneProducer {
-    InputTag src = pixelMatchGsfElectrons
-   }
-
-module allLeptons = CandMerger {
-    VInputTag src = {allMuons, allElectrons}
-}
-
-module higgsWWFilter = HiggsToWW2LeptonsSkim {
-      InputTag TrackLabel = allLeptons
-      untracked double SingleTrackPtMin = 20.0
-      untracked double DiTrackPtMin = 10.0
-      untracked double etaMin = -2.4
-      untracked double etaMax = 2.4
-}
-
-module higgsToWWHLTFilter = HLTHighLevel {
-  InputTag TriggerResultsTag = TriggerResults
-  bool byName = true
-  bool andOr= true
-#  vstring HLTPaths ={"pSMIso","pDMIso"}
-  vstring HLTPaths ={"HLT1MuonIso","HLT1Electron","HLT2MuonNonIso","HLT2Electron","HLT2ElectronRelaxed","HLTXElectronMuon","HLTXElectronMuonRelaxed"}
-}
-
-path cand = {allMuons & allElectrons & allLeptons}
-path HWWFilterPath = {higgsToWWTrigReport & higgsToWWHLTFilter & higgsWWFilter}
+path HWWFilterPath = {higgsToWWTrigReport & higgsToWW2LeptonsHLTFilter & higgsWWFilter}
