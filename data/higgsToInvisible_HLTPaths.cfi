@@ -1,0 +1,6 @@
+module higgsToInvisibleHLTFilter = HLTHighLevel { 
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName                = true
+  bool andOr                 = true
+  vstring HLTPaths = {"HLT2jetvbfMET"}
+}

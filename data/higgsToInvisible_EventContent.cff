@@ -1,0 +1,14 @@
+# Can insert block to customize what goes inside root file on top of AOD/RECOSIM
+block  higgsToInvisibleEventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+
+block higgsToInvisibleEventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "HToInvisFilterPath"
+    }
+  }
+}
