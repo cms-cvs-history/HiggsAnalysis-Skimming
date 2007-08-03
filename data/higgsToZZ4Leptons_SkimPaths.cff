@@ -1,10 +1,3 @@
-include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_HLTPaths.cfi"
+include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_Sequences.cff"
 
-module higgsToZZ4HLTrigReport = HLTrigReport {
-  InputTag HLTriggerResults  = TriggerResults
-}
-
-# HZZ Skim
-include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsSkim.cfi"
-
-path HZZFilterPath = { higgsToZZ4HLTrigReport & higgsToZZ4LeptonsHLTFilter & higgsToZZ4LeptonsSkim }
+path HZZFilterPath = { higgsToZZ4LeptonsSequence }

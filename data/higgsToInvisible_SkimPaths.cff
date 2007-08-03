@@ -1,8 +1,4 @@
-include "HiggsAnalysis/Skimming/data/higgsToInvisible_HLTPaths.cfi"
-
-module higgsToInvisibleTrigReport = HLTrigReport {
-  InputTag HLTriggerResults  = TriggerResults
-}
+include "HiggsAnalysis/Skimming/data/higgsToInvisible_Sequences.cfi"
 
 
-path HToInvisFilterPath = { higgsToZZ4HLTrigReport & higgsToInvisibleHLTFilter }
+path HToInvisFilterPath = { higgsToInvisibleSequence }

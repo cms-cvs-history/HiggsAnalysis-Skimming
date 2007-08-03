@@ -1,4 +1,4 @@
-module heavyChHiggsToTauNuSkim = HeavyChHiggsToTauNuSkim {
+module heavyChHiggsToTauNuFilter = HeavyChHiggsToTauNuSkim {
   bool DebugHeavyChHiggsToTauNuSkim     = false
 
   # Collection to be accessed

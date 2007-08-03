@@ -3,8 +3,7 @@
 # Kati Lassila-Perini - Helsinki Institute of Physics
 #
 
-
-module higgsTo2GammaSkim = HiggsTo2GammaSkim {
+module higgsTo2GammaFilter = HiggsTo2GammaSkim {
 
   bool DebugHiggsTo2GammaSkim        = false
 

@@ -1,10 +1,3 @@
-include "HiggsAnalysis/Skimming/data/higgsToWW2Leptons_HLTPaths.cfi"
+include "HiggsAnalysis/Skimming/data/higgsToWW2Leptons_Sequences.cff"
 
-module higgsToWWTrigReport = HLTrigReport {
-  InputTag HLTriggerResults = TriggerResults
-}
-
-# HWW Skim
-include "HiggsAnalysis/Skimming/data/higgsToWW2LeptonsSkim.cfi"
-
-path HWWFilterPath = {higgsToWWTrigReport & higgsToWW2LeptonsHLTFilter & higgsWWFilter}
+path HWWFilterPath = { higgsToWW2LeptonsSequence }

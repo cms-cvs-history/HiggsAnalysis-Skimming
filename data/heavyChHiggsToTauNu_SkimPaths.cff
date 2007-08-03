@@ -1,10 +1,4 @@
-include "HiggsAnalysis/Skimming/data/heavyChHiggsToTauNu_HLTPaths.cfi"
+include "HiggsAnalysis/Skimming/data/heavyChHiggsToTauNu_Sequences.cfi"
 
-module heavyChHiggsToTauNuHLTrigReport = HLTrigReport {
-  InputTag HLTriggerResults  = TriggerResults
-}
 
-# heavy H+->taunu Skim
-include "HiggsAnalysis/Skimming/data/heavyChHiggsToTauNuSkim.cfi"
-
-path heavyChHiggsToTauNuFilterPath = { heavyChHiggsToTauNuHLTrigReport & heavyChHiggsToTauNuHLTFilter & heavyChHiggsToTauNuSkim }
+path heavyChHiggsToTauNuFilterPath = { heavyChHiggsToTauNuSequence }

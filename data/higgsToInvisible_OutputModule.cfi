@@ -6,7 +6,7 @@ module higgsToInvisibleOutputModuleAODSIM = PoolOutputModule {
   using AODSIMEventContent
   using higgsToInvisibleEventSelection
   untracked PSet datasets = {
-    untracked string dataTier   = "AODSIM"
+    untracked string dataTier   = "USER"
     untracked string filterName = "higgsToInvisibleAODSIM"
   }
 }
@@ -17,7 +17,7 @@ module higgsToZZ4LeptonsOutputModuleRECOSIM = PoolOutputModule {
   using RECOSIMEventContent
   using higgsToInvisibleEventSelection
   untracked PSet datasets = {
-    untracked string dataTier   = "RECOSIM"
+    untracked string dataTier   = "USER"
     untracked string filterName = "higgsToInvisibleRECOSIM"
   }
 

@@ -1,0 +1,12 @@
+include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_HLTPaths.cfi"
+include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_Filter.cfi"
+
+module higgsToZZ4HLTrigReport = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+}
+
+sequence higgsToZZ4LeptonsSequence = { 
+  higgsToZZ4HLTrigReport & 
+  higgsToZZ4LeptonsHLTFilter & 
+  higgsToZZ4LeptonsFilter 
+}

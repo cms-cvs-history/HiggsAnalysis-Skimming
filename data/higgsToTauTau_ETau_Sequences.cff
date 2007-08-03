@@ -1,4 +1,4 @@
-include "HiggsAnalysis/Skimming/data/higgsToTauTau_ETauHLTPaths.cfi"
+include "HiggsAnalysis/Skimming/data/higgsToTauTau_ETau_HLTPaths.cfi"
 
 sequence higgsToTauTauETauHLTSequence = {
    higgsToTauTauETauHLTFilter

@@ -1,4 +1,4 @@
-module higgsWWFilter = HiggsToWW2LeptonsSkim {
+module higgsToWW2LeptonsFilter = HiggsToWW2LeptonsSkim {
   InputTag RecoTrackLabel            = recoTracks
   InputTag GlobalMuonCollectionLabel = globalMuons
   InputTag ElectronCollectionLabel   = pixelMatchGsfElectrons
