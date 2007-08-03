@@ -9,7 +9,8 @@ module higgsTo2GammaSkim = HiggsTo2GammaSkim {
   bool DebugHiggsTo2GammaSkim        = false
 
   # Collection to be accessed
-  InputTag PhotonCollectionLabel     = photons
+  #InputTag PhotonCollectionLabel     = photons
+  string PhotonCollectionLabel       = "correctedPhotons"
 
   # Pt threshold for photons
   double photon1MinimumPt            = 25.0
