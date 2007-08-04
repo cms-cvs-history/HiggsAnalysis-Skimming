@@ -1,4 +1,4 @@
-include "HiggsAnalysis/Skimming/data/higgsToInvisible_Sequences.cfi"
+include "HiggsAnalysis/Skimming/data/higgsToInvisible_Sequences.cff"
 
 
 path HToInvisFilterPath = { higgsToInvisibleSequence }

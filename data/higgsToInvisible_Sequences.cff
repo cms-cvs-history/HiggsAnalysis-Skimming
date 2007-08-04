@@ -6,6 +6,6 @@ module higgsToInvisibleTrigReport = HLTrigReport {
 
 
 sequence higgsToInvisibleSequence = { 
-  higgsToZZ4HLTrigReport & 
+  higgsToInvisibleTrigReport & 
   higgsToInvisibleHLTFilter 
 }

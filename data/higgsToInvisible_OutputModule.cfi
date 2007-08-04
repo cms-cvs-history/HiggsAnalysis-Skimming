@@ -12,7 +12,7 @@ module higgsToInvisibleOutputModuleAODSIM = PoolOutputModule {
 }
 
 
-module higgsToZZ4LeptonsOutputModuleRECOSIM = PoolOutputModule {
+module higgsToInvisibleOutputModuleRECOSIM = PoolOutputModule {
   untracked string fileName = "hToInvis_RECOSIM.root"
   using RECOSIMEventContent
   using higgsToInvisibleEventSelection
