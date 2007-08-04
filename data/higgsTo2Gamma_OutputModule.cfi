@@ -5,6 +5,7 @@ module higgsTo2GammaOutputModuleAODSIM = PoolOutputModule {
   untracked string fileName = "hgg_AODSIM.root"
   using AODSIMEventContent
   using higgsTo2GammaEventSelection
+  untracked PSet datasets = {
     untracked string dataTier = "AODSIM"
     untracked string filterName = "higgsTo2GammaAODSIM"
   }
@@ -16,8 +17,8 @@ module higgsTo2GammaOutputModuleRECOSIM = PoolOutputModule {
   using RECOSIMEventContent
   using higgsTo2GammaEventSelection
   untracked PSet datasets = {
-  untracked string dataTier = "RECOSIM"
-  untracked string filterName = "higgsTo2Gamma_RECOSIM"
+    untracked string dataTier = "RECOSIM"
+    untracked string filterName = "higgsTo2Gamma_RECOSIM"
   }
 }
 
