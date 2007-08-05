@@ -3,9 +3,9 @@ module higgsToWW2LeptonsFilter = HiggsToWW2LeptonsSkim {
   InputTag GlobalMuonCollectionLabel = globalMuons
   InputTag ElectronCollectionLabel   = pixelMatchGsfElectrons
 
-  untracked double SingleTrackPtMin = 20.0
-  untracked double DiTrackPtMin = 10.0
-  untracked double etaMin = -2.4
-  untracked double etaMax = 2.4
+  double SingleTrackPtMin = 20.0
+  double DiTrackPtMin = 10.0
+  double etaMin = -2.4
+  double etaMax = 2.4
 }
 

@@ -5,9 +5,9 @@ module heavyChHiggsToTauNuFilter = HeavyChHiggsToTauNuSkim {
   InputTag  HLTTauCollection	  = isolatedL3SingleTau
   InputTag  JetTagCollection      = trackCountingHighPurJetTags
 
-  untracked int32 minNumberOfJets = 3
-  untracked double jetEtMin       = 20.0
-  untracked double jetEtaMin      = -2.4
-  untracked double jetEtaMax      = 2.4
-  untracked double minDRFromTau   = 0.5
+  int32 minNumberOfJets = 3
+  double jetEtMin       = 20.0
+  double jetEtaMin      = -2.4
+  double jetEtaMax      = 2.4
+  double minDRFromTau   = 0.5
 }
