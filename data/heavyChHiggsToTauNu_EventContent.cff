@@ -12,13 +12,3 @@ block heavyChHiggsToTauNuEventSelection = {
     }
   }
 }
-
-
-block heavyChHiggsToTauNuEventSelectionTest = {
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {
-      "heavyChHiggsToTauNuFilterPath"
-    }
-  }
-}
-

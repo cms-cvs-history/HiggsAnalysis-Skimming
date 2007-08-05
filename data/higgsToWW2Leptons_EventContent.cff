@@ -13,12 +13,3 @@ block higgsToWW2LeptonsEventSelection = {
   }
 }
 
-
-block higgsToWW2LeptonsEventSelectionTest = {
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {
-      "HWWFilterPath"
-    }
-  }
-}
-

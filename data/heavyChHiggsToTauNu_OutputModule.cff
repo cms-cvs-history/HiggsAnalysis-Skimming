@@ -6,7 +6,7 @@ module heavyChHiggsToTauNuOutputModuleAODSIM = PoolOutputModule {
   using AODSIMEventContent
   using heavyChHiggsToTauNuEventSelection
   untracked PSet datasets = {
-    untracked string dataTier = "AODSIM"
+    untracked string dataTier = "AOD-SIM"
     untracked string filterName = "heavyChHiggsToTauNuAODSIM"
   }
 }
@@ -17,7 +17,7 @@ module heavyChHiggsToTauNuOutputModuleRECOSIM = PoolOutputModule {
   using RECOSIMEventContent
   using heavyChHiggsToTauNuEventSelection
   untracked PSet datasets = {
-    untracked string dataTier = "RECOSIM"
+    untracked string dataTier = "RECO-SIM"
     untracked string filterName = "heavyChHiggsToTauNuRECOSIM"
   }
 }

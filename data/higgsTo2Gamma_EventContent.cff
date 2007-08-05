@@ -1,7 +1,6 @@
 # Can insert block to customize what goes inside root file on top of AOD/RECO
 block  higgsTo2GammaEventContent = {
   untracked vstring outputCommands = {
-#    "keep recoMuons_muons_*_*",
   }
 }
 
@@ -13,13 +12,3 @@ block higgsTo2GammaEventSelection = {
     }
   }
 }
-
-
-block higgsTo2GammaEventSelectionTest = {
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {
-      "HggFilterPath"
-    }
-  }
-}
-

@@ -1,7 +1,6 @@
 # Can insert block to customize what goes inside root file on top of AOD/RECO
 block  higgsToZZ4LeptonsEventContent = {
   untracked vstring outputCommands = {
-#    "keep recoMuons_muons_*_*",
   }
 }
 
@@ -14,16 +13,4 @@ block higgsToZZ4LeptonsEventSelection = {
   }
 }
 
-
-block higgsToZZ4LeptonsEventSelectionTest = {
-  untracked PSet SelectEvents = {
-    vstring SelectEvents = {
-      "HZZFilterPath"
-//      "HZZFilterPath1m",
-//      "HZZFilterPath1e",
-//      "HZZFilterPath2m",
-//      "HZZFilterPath2e"
-    }
-  }
-}
 
