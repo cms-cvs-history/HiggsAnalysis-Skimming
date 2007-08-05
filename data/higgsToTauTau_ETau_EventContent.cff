@@ -20,7 +20,7 @@ block higgsToTauTauETauEventContent = {
 block higgsToTauTauETauEventSelection = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-     "higgsToTauTauETauHLTPath"
+     "higgsToTauTauETauPath"
     }
   }
 }

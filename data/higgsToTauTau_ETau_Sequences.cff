@@ -1,5 +1,5 @@
 include "HiggsAnalysis/Skimming/data/higgsToTauTau_ETau_HLTPaths.cfi"
 
-sequence higgsToTauTauETauHLTSequence = {
+sequence higgsToTauTauETauSequence = {
    higgsToTauTauETauHLTFilter
 }
