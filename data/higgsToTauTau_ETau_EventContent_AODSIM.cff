@@ -1,9 +1,0 @@
-include "Configuration/EventContent/data/EventContent.cff"
-include "HiggsAnalysis/Skimming/data/higgsToTauTau_ETau_EventContent.cff"
-
-block higgsToTauTauETauEventContentAODSIM = {
-  untracked vstring outputCommands = {}
-}
-
-replace higgsToTauTauETauEventContentAODSIM.outputCommands += AODSIMEventContent.outputCommands
-replace higgsToTauTauETauEventContentAODSIM.outputCommands += higgsToTauTauETauEventContentAODSIM.outputCommands
