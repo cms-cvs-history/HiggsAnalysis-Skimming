@@ -1,0 +1,13 @@
+include "HiggsAnalysis/Skimming/data/rsTo2Gamma_HLTPaths.cfi"
+include "HiggsAnalysis/Skimming/data/rsTo2Gamma_Filter.cfi"
+
+module rsTo2GammaHLTrigReport = HLTrigReport {
+  InputTag HLTriggerResults  = TriggerResults
+}
+
+
+sequence rsTo2GammaSequence = { 
+  rsTo2GammaHLTrigReport & 
+  rsTo2GammaHLTFilter & 
+  rsTo2GammaFilter 
+}

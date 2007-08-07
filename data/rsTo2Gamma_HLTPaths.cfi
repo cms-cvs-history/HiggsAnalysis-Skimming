@@ -1,0 +1,6 @@
+module rsTo2GammaHLTFilter = HLTHighLevel { 
+  InputTag TriggerResultsTag = TriggerResults
+  bool byName                = true
+  bool andOr                 = true
+  vstring HLTPaths = {"HLT1EMHighEt","HLT1EMVeryHighEt"}
+}
