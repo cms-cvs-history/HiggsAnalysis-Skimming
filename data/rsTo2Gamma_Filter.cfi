@@ -6,12 +6,10 @@ module rsTo2GammaFilter = HiggsTo2GammaSkim {
 
   # Collection to be accessed
   InputTag PhotonCollectionLabel     = correctedPhotons
-  # string PhotonCollectionLabel       = "correctedPhotons"
 
   # Pt threshold for photons
-  double photon1MinimumPt            = 80.0
-  double photon2MinimumPt            = 50.0
+  double photon1MinimumPt            = 50.0
 
   # Minimum number of identified photons above pt threshold
-  int32  nPhotonMinimum              = 1
+  int32  nPhotonMinimum              = 2
 }
