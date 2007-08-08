@@ -11,5 +11,5 @@ module rsTo2GammaFilter = HiggsTo2GammaSkim {
   double photon1MinimumPt            = 50.0
 
   # Minimum number of identified photons above pt threshold
-  int32  nPhotonMinimum              = 2
+  int32  nPhotonMinimum              = 1
 }
