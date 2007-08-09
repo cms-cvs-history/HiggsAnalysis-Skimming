@@ -1,6 +1,5 @@
-module heavyChHiggsToTauNuHLTFilter = HLTHighLevel { 
-  InputTag TriggerResultsTag = TriggerResults
-  bool byName                = true
-  bool andOr                 = true
-  vstring HLTPaths = {"HLT1Tau1MET"}
-}
+include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+
+module heavyChHiggsToTauNuHLTFilter = hltHighLevel
+
+replace heavyChHiggsToTauNuHLTFilter.HLTPaths = {"HLT1Tau1MET"}

@@ -1,6 +1,5 @@
-module higgsToInvisibleHLTFilter = HLTHighLevel { 
-  InputTag TriggerResultsTag = TriggerResults
-  bool byName                = true
-  bool andOr                 = true
-  vstring HLTPaths = {"HLT2jetvbfMET"}
-}
+include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+
+module higgsToInvisibleHLTFilter = hltHighLevel
+
+replace higgsToInvisibleHLTFilter.HLTPaths = {"HLT2jetvbfMET"}

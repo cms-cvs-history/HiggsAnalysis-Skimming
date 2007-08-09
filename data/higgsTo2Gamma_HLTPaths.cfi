@@ -1,6 +1,5 @@
-module higgsTo2GammaHLTFilter = HLTHighLevel { 
-  InputTag TriggerResultsTag = TriggerResults
-  bool byName                = true
-  bool andOr                 = true
-  vstring HLTPaths = {"HLT1Photon","HLT1PhotonRelaxed","HLT2Photon","HLT2PhotonRelaxed"}
-}
+include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+
+module higgsTo2GammaHLTFilter = hltHighLevel
+
+replace higgsTo2GammaHLTFilter.HLTPaths = {"HLT1Photon","HLT1PhotonRelaxed","HLT2Photon","HLT2PhotonRelaxed"}

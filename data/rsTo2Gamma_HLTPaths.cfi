@@ -1,6 +1,5 @@
-module rsTo2GammaHLTFilter = HLTHighLevel { 
-  InputTag TriggerResultsTag = TriggerResults
-  bool byName                = true
-  bool andOr                 = true
-  vstring HLTPaths = {"HLT1EMHighEt","HLT1EMVeryHighEt"}
-}
+include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+
+module rsTo2GammaHLTFilter = hltHighLevel
+
+replace rsTo2GammaHLTFilter.HLTPaths = {"HLT1EMHighEt","HLT1EMVeryHighEt"}

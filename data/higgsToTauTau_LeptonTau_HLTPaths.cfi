@@ -1,6 +1,5 @@
-module higgsToTauTauLeptonTauHLTFilter = HLTHighLevel {
-    InputTag TriggerResultsTag = TriggerResults
-    bool byName = true
-    bool andOr  = true
-    vstring HLTPaths = { "HLT1Electron","HLTXElectronTau","HLT1MuonIso","HLTXMuonTau" }
-}
+include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+
+module higgsToTauTauLeptonTauHLTFilter = hltHighLevel 
+
+replace higgsToTauTauLeptonTauHLTFilter.HLTPaths = { "HLT1Electron","HLTXElectronTau","HLT1MuonIso","HLTXMuonTau" }

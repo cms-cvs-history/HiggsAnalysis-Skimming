@@ -1,6 +1,5 @@
-module higgsToWW2LeptonsHLTFilter = HLTHighLevel { 
-  InputTag TriggerResultsTag = TriggerResults
-  bool byName                = true
-  bool andOr                 = true
-  vstring HLTPaths = {"HLT1MuonIso","HLT1Electron","HLT2MuonNonIso","HLT2Electron","HLT2ElectronRelaxed","HLTXElectronMuon","HLTXElectronMuonRelaxed"}
-}
+include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
+
+module higgsToWW2LeptonsHLTFilter = hltHighLevel
+
+replace  higgsToWW2LeptonsHLTFilter.HLTPaths = {"HLT1MuonIso","HLT1Electron","HLT2MuonNonIso","HLT2Electron","HLT2ElectronRelaxed","HLTXElectronMuon","HLTXElectronMuonRelaxed"}
