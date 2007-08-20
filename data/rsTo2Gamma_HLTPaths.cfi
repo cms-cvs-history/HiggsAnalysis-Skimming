@@ -1,5 +1,3 @@
-include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
-
-module rsTo2GammaHLTFilter = hltHighLevel
+module rsTo2GammaHLTFilter = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 
 replace rsTo2GammaHLTFilter.HLTPaths = {"HLT1EMHighEt","HLT1EMVeryHighEt"}

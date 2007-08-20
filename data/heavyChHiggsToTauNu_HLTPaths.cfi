@@ -1,5 +1,3 @@
-include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
-
-module heavyChHiggsToTauNuHLTFilter = hltHighLevel
+module heavyChHiggsToTauNuHLTFilter = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 
 replace heavyChHiggsToTauNuHLTFilter.HLTPaths = {"HLT1Tau"}

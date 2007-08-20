@@ -1,5 +1,3 @@
-include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
-
-module higgsTo2GammaHLTFilter = hltHighLevel
+module higgsTo2GammaHLTFilter = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 
 replace higgsTo2GammaHLTFilter.HLTPaths = {"HLT1Photon","HLT1PhotonRelaxed","HLT2Photon","HLT2PhotonRelaxed"}

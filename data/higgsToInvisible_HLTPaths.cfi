@@ -1,5 +1,3 @@
-include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
-
-module higgsToInvisibleHLTFilter = hltHighLevel
+module higgsToInvisibleHLTFilter = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 
 replace higgsToInvisibleHLTFilter.HLTPaths = {"HLT2jetvbfMET"}

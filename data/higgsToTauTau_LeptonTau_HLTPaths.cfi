@@ -1,5 +1,3 @@
-include "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
-
-module higgsToTauTauLeptonTauHLTFilter = hltHighLevel 
+module higgsToTauTauLeptonTauHLTFilter = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 
 replace higgsToTauTauLeptonTauHLTFilter.HLTPaths = { "HLT1Electron","HLTXElectronTau","HLT1MuonIso","HLTXMuonTau" }
