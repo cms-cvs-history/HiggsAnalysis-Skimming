@@ -85,9 +85,9 @@ bool HeavyChHiggsToTauNuSkim::filter(edm::Event& iEvent, const edm::EventSetup& 
 
   // jets
 	
-  Handle<CaloJetCollection> jetHandle;	
+  Handle<JetTagCollection> jetTagHandle;	
   try {
-    iEvent.getByLabel(jetLabel,jetHandle);
+    iEvent.getByLabel(jetLabel,jetTagHandle);
   }
 
   catch (const edm::Exception& e) {
@@ -97,15 +97,16 @@ bool HeavyChHiggsToTauNuSkim::filter(edm::Event& iEvent, const edm::EventSetup& 
 	
   bool accepted = false;
 	
-  if (jetHandle.isValid() ) {
+  if (jetTagHandle.isValid() ) {
     int nJets = 0;
-    const reco::CaloJetCollection & jets = *(jetHandle.product());
-    CaloJetCollection::const_iterator iJet;
+    const reco::JetTagCollection & jets = *(jetTagHandle.product());
+    JetTagCollection::const_iterator iJet;
     for (iJet = jets.begin(); iJet!= jets.end(); iJet++ ) {
-      if (iJet->et()  > jetEtMin  &&
-          iJet->eta() > jetEtaMin &&
-	  iJet->eta() < jetEtaMax ) {
-        double DR = deltaR(theTau.eta(),iJet->eta(),theTau.phi(),iJet->phi());
+      Jet jet = *(iJet->jet().get());
+      if (jet.et()  > jetEtMin  &&
+          jet.eta() > jetEtaMin &&
+	  jet.eta() < jetEtaMax ) {
+        double DR = deltaR(theTau.eta(),jet.eta(),theTau.phi(),jet.phi());
         if (DR > minDRFromTau) nJets++;		
       }
     }
