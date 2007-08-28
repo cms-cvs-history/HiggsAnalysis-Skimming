@@ -3,11 +3,11 @@ module heavyChHiggsToTauNuFilter = HeavyChHiggsToTauNuSkim {
 
   # Collection to be accessed
   InputTag  HLTTauCollection	  = isolatedL3SingleTau
-  InputTag  JetTagCollection      = iterativeCone5CaloJets
+  InputTag  JetTagCollection      = trackCountingHighPurJetTags
 
   int32 minNumberOfJets = 3
   double jetEtMin       = 20.0
-  double jetEtaMin      = -2.5
-  double jetEtaMax      = 2.5
+  double jetEtaMin      = -2.4
+  double jetEtaMax      = 2.4
   double minDRFromTau   = 0.5
 }
