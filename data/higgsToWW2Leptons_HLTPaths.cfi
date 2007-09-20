@@ -1,3 +1,3 @@
 module higgsToWW2LeptonsHLTFilter = hltHighLevel from "HLTrigger/HLTfilters/data/hltHighLevel.cfi"
 
-replace  higgsToWW2LeptonsHLTFilter.HLTPaths = {"HLT1MuonIso","HLT1Electron","HLT2MuonNonIso","HLT2Electron","HLT2ElectronRelaxed","HLTXElectronMuon","HLTXElectronMuonRelaxed"}
+replace  higgsToWW2LeptonsHLTFilter.HLTPaths = {"HLT1MuonIso","HLT1MuonNonIso","HLT1Electron","HLT1ElectronRelaxed","HLT2MuonNonIso","HLT2Electron","HLT2ElectronRelaxed","HLTXElectronMuon","HLTXElectronMuonRelaxed"}
