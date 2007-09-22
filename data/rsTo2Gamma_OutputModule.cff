@@ -6,7 +6,7 @@ module rsTo2GammaOutputModuleAODSIM = PoolOutputModule {
   using AODSIMEventContent
   using rsTo2GammaEventSelection
   untracked PSet datasets = {
-    untracked string dataTier = "AOD-SIM"
+    untracked string dataTier = "USER"
     untracked string filterName = "rsTo2GammaAODSIM"
   }
 }
@@ -17,7 +17,7 @@ module rsTo2GammaOutputModuleRECOSIM = PoolOutputModule {
   using RECOSIMEventContent
   using rsTo2GammaEventSelection
   untracked PSet datasets = {
-    untracked string dataTier = "RECO-SIM"
+    untracked string dataTier = "USER"
     untracked string filterName = "rsTo2Gamma_RECOSIM"
   }
 }
