@@ -1,24 +1,2 @@
-include "Configuration/EventContent/data/EventContent.cff"
-include "HiggsAnalysis/Skimming/data/higgsToZZ4Leptons_EventContent.cff"
-
-module higgsToZZ4LeptonsOutputModuleAODSIM = PoolOutputModule {
-  untracked string fileName = "hzz4l_AODSIM.root"
-  using AODSIMEventContent
-  using higgsToZZ4LeptonsEventSelection
-  untracked PSet dataset = {
-    untracked string dataTier = "USER"
-    untracked string filterName = "higgsToZZ4LeptonsAODSIM"
-  }
-}
-
-
-module higgsToZZ4LeptonsOutputModuleRECOSIM = PoolOutputModule {
-  untracked string fileName = "hzz4l_RECOSIM.root"
-  using RECOSIMEventContent
-  using higgsToZZ4LeptonsEventSelection
-  untracked PSet dataset = {
-    untracked string dataTier = "USER"
-    untracked string filterName = "higgsToZZ4LeptonsRECOSIM"
-  }
-}
-
+include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsOutputModuleAODSIM.cfi"
+include "HiggsAnalysis/Skimming/data/higgsToZZ4LeptonsOutputModuleRECOSIM.cfi"
