@@ -9,11 +9,11 @@ include "HLTrigger/Egamma/data/SingleElectronL1Isolated_1e32.cff"
 include "HLTrigger/Egamma/data/DoubleElectronL1Isolated_1e32.cff"
 
 # HWW Skim
-//  include "PhysicsTools/RecoCandAlgos/data/allMuons.cfi" 
+//  include "PhysicsTools/RecoAlgos/data/allMuons.cfi" 
    module allMuons = MuonCloneProducer {
      InputTag src = globalMuons
    }
-//  include "PhysicsTools/RecoCandAlgos/data/allElectrons.cfi"
+//  include "PhysicsTools/RecoAlgos/data/allElectrons.cfi"
    module allElectrons = PixelMatchGsfElectronCloneProducer {
     InputTag src = pixelMatchGsfElectrons
    }
