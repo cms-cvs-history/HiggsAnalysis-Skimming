@@ -1,3 +1,0 @@
-include "HiggsAnalysis/Skimming/data/rsTo2Gamma_Sequences.cff"
-
-path RSggFilterPath = { rsTo2GammaSequence }
