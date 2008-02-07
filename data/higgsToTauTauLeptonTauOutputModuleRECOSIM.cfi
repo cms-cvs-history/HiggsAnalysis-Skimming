@@ -1,5 +1,6 @@
 include "HiggsAnalysis/Skimming/data/higgsToTauTau_LeptonTau_EventContent.cff"
 include "HiggsAnalysis/Skimming/data/higgsToTauTau_LeptonTau_EventContent_AODSIM.cff"
+include "HiggsAnalysis/Skimming/data/higgsToTauTau_LeptonTau_EventContent_RECOSIM.cff"
 
 module higgsToTauTauLeptonTauOutputModuleRECOSIM = PoolOutputModule {
   untracked string fileName = "higgsToTauTauLeptonTauRECOSIM.root"
