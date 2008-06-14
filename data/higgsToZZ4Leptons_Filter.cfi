@@ -3,6 +3,7 @@
 # Dominique Fortin - UC Riverside
 #
 
+
 module higgsToZZ4LeptonsFilter = HiggsToZZ4LeptonsSkim {
 
   bool DebugHiggsToZZ4LeptonsSkim    = false
@@ -12,14 +13,10 @@ module higgsToZZ4LeptonsFilter = HiggsToZZ4LeptonsSkim {
   InputTag GlobalMuonCollectionLabel = globalMuons
   InputTag ElectronCollectionLabel   = pixelMatchGsfElectrons
 
-  # Pt thresholds for leptons
-  double stiffMinimumPt              = 10.0
-  double softMinimumPt               = 5.0
+  # Pt threshold for leptons
+  double muonMinimumPt               = 5.0
+  double electronMinimumEt           = 5.0
 
   # Minimum number of identified leptons above pt threshold
-  int32  nStiffLeptonMinimum         = 2
-
-  # nLepton is nSoft + nStiff
   int32  nLeptonMinimum              = 3
-
 }
