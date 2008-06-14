@@ -13,7 +13,7 @@ module highAll = HLTHighLevel{
   InputTag TriggerResultsTag = TriggerResults
   bool byName = true
   bool andOr= true
-  vstring HLTPaths = {"HLT1Tau1MET"}
+  vstring HLTPaths = {"HLT_IsoTau_MET35_Trk15_L1MET"}
 }
 
 

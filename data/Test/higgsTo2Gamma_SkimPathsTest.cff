@@ -6,16 +6,16 @@ include "HLTrigger/Configuration/data/common/HLTSetup.cff"
 include "HLTrigger/Egamma/data/EgammaHLTLocal.cff"
 
 include "HLTrigger/Egamma/data/SinglePhotonL1Isolated.cff"
-path HLT1Photon          =    {singlePhotonL1Isolated}
+path HLT_IsoPhoton30_L1I          =    {singlePhotonL1Isolated}
 
 include "HLTrigger/Egamma/data/SinglePhotonL1NonIsolated.cff"
-path HLT1PhotonRelaxed   =    {singlePhotonL1NonIsolated}
+path HLT_IsoPhoton40_L1R   =    {singlePhotonL1NonIsolated}
 
 include "HLTrigger/Egamma/data/DoublePhotonL1Isolated.cff"
-path HLT2Photon          =    {doublePhotonL1Isolated}
+path HLT_DoubleIsoPhoton20_L1I          =    {doublePhotonL1Isolated}
 
 include "HLTrigger/Egamma/data/DoublePhotonL1NonIsolated.cff"
-path HLT2PhotonRelaxed   =    {doublePhotonL1NonIsolated}
+path HLT_DoubleIsoPhoton20_L1R   =    {doublePhotonL1NonIsolated}
 
 # Hgg Filter
 include "HiggsAnalysis/Skimming/data/higgsTo2GammaSkim.cfi"

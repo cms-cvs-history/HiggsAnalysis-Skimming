@@ -3,29 +3,29 @@ include "HLTrigger/Configuration/data/common/HLTSetup.cff"
 
 # Muons
 include "HLTrigger/Muon/data/PathSingleMu_1032_NoIso.cff"
-path HLT1MuonNonIso      = { singleMuNoIso }
+path HLT_Mu15_L1Mu7      = { singleMuNoIso }
 
 include "HLTrigger/Muon/data/PathSingleMu_1032_Iso.cff"
-path HLT1MuonIso         = { singleMuIso }
+path HLT_IsoMu11         = { singleMuIso }
 
 include "HLTrigger/Muon/data/PathDiMuon_1032_NoIso.cff"
-path HLT2MuonNonIso      = { diMuonNoIso }
+path HLT_DoubleMu3      = { diMuonNoIso }
 
 
 # Electrons Local
 include "HLTrigger/Egamma/data/EgammaHLTLocal.cff"
 
 include "HLTrigger/Egamma/data/SingleElectronL1Isolated.cff"
-path HLT1Electron        =    {singleElectronL1Isolated}
+path HLT_IsoEle15_L1I        =    {singleElectronL1Isolated}
 
 include "HLTrigger/Egamma/data/SingleElectronL1NonIsolated.cff"
-path HLT1ElectronRelaxed =    {singleElectronL1NonIsolated}
+path HLT_IsoEle18_L1R =    {singleElectronL1NonIsolated}
 
 include "HLTrigger/Egamma/data/DoubleElectronL1Isolated.cff"
-path HLT2Electron        =    {doubleElectronL1Isolated}
+path HLT_DoubleIsoEle10_L1I        =    {doubleElectronL1Isolated}
 
 include "HLTrigger/Egamma/data/DoubleElectronL1NonIsolated.cff"
-path HLT2ElectronRelaxed =    {doubleElectronL1NonIsolated}
+path HLT_DoubleIsoEle12_L1R =    {doubleElectronL1NonIsolated}
 
 
 
@@ -38,21 +38,21 @@ module highAll = HLTHighLevel{
   InputTag TriggerResultsTag = TriggerResults
   bool byName = true
   bool andOr= true
-  vstring HLTPaths = {"HLT1MuonNonIso","HLT1MuonIso","HLT2MuonNonIso","HLT1ElectronRelaxed","HLT2ElectronRelaxed","HLT1Electron","HLT2Electron"}
+  vstring HLTPaths = {"HLT_Mu15_L1Mu7","HLT_IsoMu11","HLT_DoubleMu3","HLT_IsoEle18_L1R","HLT_DoubleIsoEle12_L1R","HLT_IsoEle15_L1I","HLT_DoubleIsoEle10_L1I"}
 }
 
 module high1m = HLTHighLevel{
   InputTag TriggerResultsTag = TriggerResults
   bool byName = true
   bool andOr= true
-  vstring HLTPaths = {"HLT1MuonNonIso","HLT1MuonIso"}
+  vstring HLTPaths = {"HLT_Mu15_L1Mu7","HLT_IsoMu11"}
 }
 
 module high2m = HLTHighLevel{
   InputTag TriggerResultsTag = TriggerResults
   bool byName = true
   bool andOr= true
-  vstring HLTPaths = {"HLT2MuonNonIso"}
+  vstring HLTPaths = {"HLT_DoubleMu3"}
 }
 
 
@@ -60,7 +60,7 @@ module high1e = HLTHighLevel{
   InputTag TriggerResultsTag = TriggerResults
   bool byName = true
   bool andOr= true
-  vstring HLTPaths = {"HLT1ElectronRelaxed","HLT1Electron"}
+  vstring HLTPaths = {"HLT_IsoEle18_L1R","HLT_IsoEle15_L1I"}
 }
 
 
@@ -68,7 +68,7 @@ module high2e = HLTHighLevel{
   InputTag TriggerResultsTag = TriggerResults
   bool byName = true
   bool andOr= true
-  vstring HLTPaths = {"HLT2ElectronRelaxed","HLT2Electron"}
+  vstring HLTPaths = {"HLT_DoubleIsoEle12_L1R","HLT_DoubleIsoEle10_L1I"}
 }
 
 
