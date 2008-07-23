@@ -1,5 +1,0 @@
-include "HiggsAnalysis/Skimming/data/higgsToTauTau_LeptonTau_HLTPaths.cfi"
-
-sequence higgsToTauTauLeptonTauSequence = {
-   higgsToTauTauLeptonTauHLTFilter
-}
