@@ -1,3 +1,0 @@
-include "HiggsAnalysis/Skimming/data/higgsToWW2Leptons_Sequences.cff"
-
-path HWWFilterPath = { higgsToWW2LeptonsSequence }
