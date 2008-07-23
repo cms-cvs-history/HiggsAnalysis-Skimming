@@ -1,4 +1,0 @@
-include "HiggsAnalysis/Skimming/data/heavyChHiggsToTauNu_Sequences.cff"
-
-
-path heavyChHiggsToTauNuFilterPath = { heavyChHiggsToTauNuSequence }

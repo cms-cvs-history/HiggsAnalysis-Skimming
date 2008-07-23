@@ -1,3 +1,0 @@
-include "HiggsAnalysis/Skimming/data/higgsTo2Gamma_Sequences.cff"
-
-path HggFilterPath = { higgsTo2GammaSequence }

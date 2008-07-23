@@ -1,9 +1,0 @@
-include "Configuration/EventContent/data/EventContent.cff"
-include "HiggsAnalysis/Skimming/data/higgsToTauTau_LeptonTau_EventContent.cff"
-
-block higgsToTauTauLeptonTauEventContentRECOSIM = {
-  untracked vstring outputCommands = {}
-}
-
-replace higgsToTauTauLeptonTauEventContentRECOSIM.outputCommands += RECOSIMEventContent.outputCommands
-replace higgsToTauTauLeptonTauEventContentRECOSIM.outputCommands += higgsToTauTauLeptonTauEventContentRECOSIM.outputCommands

@@ -1,2 +1,0 @@
-include "HiggsAnalysis/Skimming/data/higgsToWW2LeptonsOutputModuleAODSIM.cfi"
-include "HiggsAnalysis/Skimming/data/higgsToWW2LeptonsOutputModuleRECOSIM.cfi"
