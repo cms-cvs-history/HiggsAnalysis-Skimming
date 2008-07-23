@@ -1,2 +1,0 @@
-include "HiggsAnalysis/Skimming/data/heavyChHiggsToTauNuOutputModuleAODSIM.cfi"
-include "HiggsAnalysis/Skimming/data/heavyChHiggsToTauNuOutputModuleRECOSIM.cfi"

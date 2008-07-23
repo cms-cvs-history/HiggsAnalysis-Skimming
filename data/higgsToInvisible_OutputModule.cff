@@ -1,2 +1,0 @@
-include "HiggsAnalysis/Skimming/data/higgsToInvisibleOutputModuleAODSIM.cfi"
-include "HiggsAnalysis/Skimming/data/higgsToInvisibleOutputModuleRECOSIM.cfi"
