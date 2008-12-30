@@ -1,2 +1,0 @@
-include "HiggsAnalysis/Skimming/data/rsTo2GammaOutputModuleAODSIM.cfi"
-include "HiggsAnalysis/Skimming/data/rsTo2GammaOutputModuleRECOSIM.cfi"
