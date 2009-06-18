@@ -26,10 +26,10 @@ process.source = cms.Source("PoolSource",
 
 configurationMetadata = cms.untracked.PSet(
     version = cms.untracked.string('$Revision: 1.1 $'),
-    name = cms.untracked.string('$Source: /cvs_server/repositories/CMSSW/CMSSW/HiggsAnalysis/Skimming/test/heavyChHiggsToTauNuBackgroundSkim.py,v $'),
-    annotation = cms.untracked.string('Skim for heavy H+->tau nu background events with muon selected instead of tau')
+    name = cms.untracked.string('$Source: /cvs_server/repositories/CMSSW/CMSSW/HiggsAnalysis/Skimming/test/heavyChHiggsToTauNuQCDBackgroundAnalysisSkim.py,v $'),
+    annotation = cms.untracked.string('Skim for heavy H+->tau nu QCD background analysis')
 )
-process.heavyChHiggsToTauNuHLTFilter.HLTPaths = ['HLT_IsoMu15']
+process.heavyChHiggsToTauNuHLTFilter.HLTPaths = ['HLT_Jet80']
 process.heavyChHiggsToTauNuFilter.minNumberOfJets = cms.int32(3)
 
 process.outpath = cms.EndPath(process.heavyChHiggsToTauNuOutputModuleRECOSIM)
