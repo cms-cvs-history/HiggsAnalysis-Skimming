@@ -6,8 +6,8 @@
  *  
  *  This class is an EDFilter choosing reconstructed di-tracks
  *
- *  $Date: 2007/08/03 01:42:38 $
- *  $Revision: 1.2 $
+ *  $Date: 2007/12/12 16:08:48 $
+ *  $Revision: 1.3 $
  *
  *  \author Ezio Torassa  -  INFN Padova
  *
@@ -25,18 +25,13 @@
 
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 
-
-using namespace edm;
-using namespace std;
-
-
 class HiggsToWW2LeptonsSkim : public edm::EDFilter {
     public:
        explicit HiggsToWW2LeptonsSkim(const edm::ParameterSet&);
        ~HiggsToWW2LeptonsSkim();
        virtual void endJob() ;
 
-       virtual bool filter(Event&, const EventSetup&);
+       virtual bool filter(edm::Event&, const edm::EventSetup&);
 
    private:
       double singleTrackPtMin_;
