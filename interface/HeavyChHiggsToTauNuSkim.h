@@ -23,10 +23,7 @@
 #include "FWCore/Framework/interface/Event.h"
 #include "FWCore/Framework/interface/MakerMacros.h"
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
-#include "FWCore/ParameterSet/interface/InputTag.h"
-
-using namespace edm;
-using namespace std;
+#include "FWCore/Utilities/interface/InputTag.h"
 
 #include <math.h>
 
@@ -61,8 +58,8 @@ class HeavyChHiggsToTauNuSkim : public edm::EDFilter {
 
 	bool 		debug;
 
-        InputTag        hltTauLabel;
-	InputTag	jetLabel;
+        edm::InputTag   hltTauLabel;
+	edm::InputTag	jetLabel;
         int 		minNumberOfjets;
         double 		jetEtMin;
         double 		jetEtaMin;
